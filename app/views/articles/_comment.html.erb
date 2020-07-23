@@ -1,5 +1,5 @@
 <% @article.comments.each do |comment| %>
-  <h4>Comment by <%= comment.author_name %></h4>
+  <h6><%= comment.author_name %> said</h6>
   <p class='comment'><%= comment.body %></p>
   <p>Posted <%= distance_of_time_in_words(comment.article.created_at, comment.created_at) %> later</p><br>
 <% end %>
